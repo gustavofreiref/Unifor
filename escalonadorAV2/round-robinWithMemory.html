@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>AV 2 SO - Escalonador de Processos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilo.css">
+  </head>
+  <body>
+    <header>
+      <h1>AV 2 SO - Escalonador de Processos</h1>
+      <h1>UNIFOR</h1>
+      <h1>Professor: Eriko Werbet</h1>
+    </header>
+    <div id="main">
+      <h1>ENTRADAS</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="quantidadeProcessos">Numero de Processos:</label>
+        </div>
+        <div class="col-md-6">
+          <input id="quantidadeProcessos" type="number" min="1" value="1" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="quantidadeCores">Numero de Core:</label>
+        </div>
+        <div class="col-md-6">
+          <input id="quantidadeCores" type="number" min="1" max="64" value="1" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="tempoQuantum">Tempo quantum(s):</label>
+        </div>
+        <div class="col-md-6">
+          <input id="tempoQuantum" type="number" min="2" max="20" value="2" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="tamanhototaldamemoria">Tamanho Total da Memória</label>
+        </div>
+        <div class="col-md-6">
+          <input id="tamanhototaldamemoria" type="number" value="0" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="algoritimo-memoria">Algoritimo</label>
+        </div>
+        <div class="col-md-6">
+            <select id="algoritimo-memoria">
+              <option value="first-fit">First Fit</option>
+              <option value="best-fit">Best Fit</option>
+            </select>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-md-6">
+            <label for="alocacao-dinamica">Alocação Dinâmica?</label>
+          </div>
+          <div class="col-md-6">
+            <input id="alocacao-dinamica" type="checkbox">
+          </div>
+        </div>
+      <div>
+      <div id="button"></div>
+      <h1>Tabela de processos</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <table id="tabela-blocos">
+          </table>
+        </div>
+        <div class="col-md-6">
+          <table id="tabela-memoria">
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <table id="tabela-prontos">
+          </table>
+        </div>
+        <div class="col-md-4">
+          <table id="tabela-execucao">
+          </table>
+        </div>
+        <div class="col-md-4">
+          <table id="tabela-terminado">
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="src/round-robinWithMemory.js"></script>
+  </body>
+</html>

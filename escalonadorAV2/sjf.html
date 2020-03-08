@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>AV 1 SO - Escalonador de Processos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilo.css">
+  </head>
+  <body>
+    <header>
+      <h1>AV 1 SO - Escalonador de Processos</h1>
+    </header>
+    <div id="main">
+      <h1>Controles</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="quantidadeProcessos">Numero de Processos:</label>
+        </div>
+        <div class="col-md-6">
+          <input id="quantidadeProcessos" type="number" min="1" value="1" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="quantidadeCores">Numero de Core:</label>
+        </div>
+        <div class="col-md-6">
+          <input id="quantidadeCores" type="number" min="1" max="64" value="1" required>
+        </div>
+      </div>
+      <div>
+      <div id="button"></div>
+      <h1>Tabela de processos</h1>
+      <div class="row">
+        <div class="col-md-4">
+          <table id="tabela-prontos">
+            <tr>
+              <th>ID</th>
+              <th>Tempo Execução</th>
+              <th>Tempo Restante</th>
+              <th>Estado</th>
+            </tr>
+          </table>
+        </div>
+        <div class="col-md-4">
+          <table id="tabela-execucao">
+            <tr>
+              <th>ID</th>
+              <th>ID Processo</th>
+              <th>Tempo Execução</th>
+              <th>Tempo Restante</th>
+              <th>Estado</th>
+            </tr>
+          </table>
+        </div>
+        <div class="col-md-4">
+          <table id="tabela-terminado">
+            <tr>
+              <th>ID</th>
+              <th>Tempo Execução</th>
+              <th>Tempo Restante</th>
+              <th>Estado</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="src/sjf.js"></script>
+  </body>
+</html>
